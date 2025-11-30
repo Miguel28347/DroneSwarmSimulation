@@ -1,14 +1,17 @@
 # 🚁 DroneSwarmSimulation
-This is a multi-drone autonomous swarm simulator deaturing physics, encrypted networking, telemetry logging, and a Java Swing visualizer. 
 
+This is a multi-drone autonomous swarm simulator deaturing physics, encrypted networking, telemetry logging, and a Java Swing visualizer. 
 # 📌 Overview
 
-DroneSwarmSilumation is a full 2D multi-drone swarm enviornment built in C++, with real-time visualization provided through a Java Swing application. It models autonomous drones navigating a simulated world using: 3
+DroneSwarmSilumation is a full 2D multi-drone swarm enviornment built in C++, with real-time visualization provided through a Java Swing application. It models autonomous drones navigating a simulated world using:
+
 - Newtonian Physics
 - Formation control with proportional-derivative controllers
 - A lossy, encrypted communication network
 - Real-time telemetry exported for visualization
+
 # 🚀 Features
+
 ## 🧠 Swarm Control
 
 - N-drone formation flight using proportional-derivative (PD) controllers
@@ -16,36 +19,38 @@ DroneSwarmSilumation is a full 2D multi-drone swarm enviornment built in C++, wi
 - Automatic thrust control and velocity damping
 
 ## ⚙️ Physics Engine
+
 - Semi-implicit Euler integration
 - Gravity, boundary collision handling, and speed limiting
 - Clean vector math abstraction(Vector2)
 - Drone mass, thrust and envelope parameters
 
-## 🔐 Networking Layer
-### Realistic radio-style network model with:
+## 🔐 Networking Layer  
+Realistic radio-style network model with:
+
 - Base latency + random jitter
 - Configurable packet-drop probablity
 - XOR payload encryption(lightweight)
 - Message IDs and timestamps
 - per-node inbox messages queues
 - Communication logs saved to comms_log.csv
-## 📊 Telemetry Logging
-### Every simulation step logs:
-#### time, droneId, x, y, vx, vy
-##### Saved to simulation_log.csv, which the Java visualizer reads.
-🎨 Java Swing Visualizer
 
-Reads CSV logs directly
+## 📊 Telemetry Logging  
+Every simulation step logs:  
 
-Renders drones as moving colored circles
+time, droneId, x, y, vx, vy  
 
-Displays time, drone IDs, and frame count
+Saved to simulation_log.csv, which the Java visualizer reads.
 
-Scales world coordinates into viewport
+## 🎨 Java Swing Visualizer
 
-Smooth ~30 FPS animation
+- Reads CSV logs in real-time
+- Displays drones as animated colored circles
+- Scales world coordinates dynamically
+- Shows time, drone IDs, and frame count
+- ~30 FPS animation
 
-📂 Repository Structure
+## 📂 Repository Structure
 DroneSwarmSimulation/
 │
 ├── Drone.cpp
