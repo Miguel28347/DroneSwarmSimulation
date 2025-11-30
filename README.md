@@ -1,70 +1,38 @@
-🚁 DroneSwarmSimulation
-A multi-drone autonomous swarm simulation with physics, encrypted networking, telemetry logging, and a Java Swing visualizer.
-📌 Overview
+# 🚁 DroneSwarmSimulation
+This is a multi-drone autonomous swarm simulator deaturing physics, encrypted networking, telemetry logging, and a Java Swing visualizer. 
 
-DroneSwarmSimulation is a full 2D multi-agent swarm simulation developed in C++ with real-time visualization provided by a Java Swing application.
-The system models autonomous drones navigating a physical world using Newtonian mechanics, formation control algorithms, and a simulated lossy communication network.
+# 📌 Overview
 
-This repo demonstrates:
+DroneSwarmSilumation is a full 2D multi-drone swarm enviornment built in C++, with real-time visualization provided through a Java Swing application. It models autonomous drones navigating a simulated world using: 3
+- Newtonian Physics
+- Formation control with proportional-derivative controllers
+- A lossy, encrypted communication network
+- Real-time telemetry exported for visualization
+# 🚀 Features
+## 🧠 Swarm Control
 
-Applied physics simulation
+- N-drone formation flight using proportional-derivative (PD) controllers
+- Per-drone goal offsets and dynamic target acquistion
+- Automatic thrust control and velocity damping
 
-Multi-agent control (formation flight)
+## ⚙️ Physics Engine
+- Semi-implicit Euler integration
+- Gravity, boundary collision handling, and speed limiting
+- Clean vector math abstraction(Vector2)
+- Drone mass, thrust and envelope parameters
 
-Realistic communication constraints (latency, jitter, packet drops, XOR encryption)
-
-Clean object-oriented architecture
-
-Cross-language visualization (C++ → CSV → Java Swing)
-
-Modular code with full Doxygen documentation
-
-This project was built from scratch to showcase engineering ability, system design, and simulation frameworks.
-
-🚀 Features
-🧠 Swarm Control
-
-N-drone formation flight using PD controllers
-
-Per-drone target offsets and goal acquisition
-
-Automatic thrust control and velocity damping
-
-⚙️ Physics Engine
-
-Newtonian integration (semi-implicit Euler)
-
-Gravity, boundary collision, and speed limits
-
-Clean vector math abstraction (Vector2)
-
-Drone mass, thrust, and envelope limits
-
-🔐 Networking Layer
-
-Simulated realistic radio communication:
-
-Base latency + random jitter
-
-Configurable packet drop probability
-
-XOR payload encryption
-
-Delivery timestamps, message IDs
-
-Per-node inbox messages
-
-Output logged to comms_log.csv
-
-📊 Telemetry Logging
-
-Every timestep, the simulator logs:
-
-time, droneId, x, y, vx, vy
-
-
-Into simulation_log.csv, which the Java visualizer reads.
-
+## 🔐 Networking Layer
+### Realistic radio-style network model with:
+- Base latency + random jitter
+- Configurable packet-drop probablity
+- XOR payload encryption(lightweight)
+- Message IDs and timestamps
+- per-node inbox messages queues
+- Communication logs saved to comms_log.csv
+## 📊 Telemetry Logging
+### Every simulation step logs:
+#### time, droneId, x, y, vx, vy
+##### Saved to simulation_log.csv, which the Java visualizer reads.
 🎨 Java Swing Visualizer
 
 Reads CSV logs directly
