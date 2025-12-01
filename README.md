@@ -70,82 +70,37 @@ DroneSwarmSimulation/
 ├── .gitignore
 └── README.md
 
-🧩 Architecture Diagram (Text-Based)
-+-----------------------+
-|      Simulator        |
-|-----------------------|
-| - manages drones      |
-| - runs physics        |
-| - steps network       |
-+-----------+-----------+
-            |          
-            v
-+-----------------------+       +---------------------+
-|        Drone          |<----->|      Network        |
-|-----------------------|       |---------------------|
-| position, velocity    |       | latency, jitter     |
-| thrust, params        |       | packet dropping     |
-| physics update        |       | XOR encryption      |
-+-----------+-----------+       +----------+----------+
-            |                                |
-            | telemetry                      | logs comms
-            v                                v
-      simulation_log.csv             comms_log.csv
-            |
-            v
-+----------------------------+
-|   Java Swing Visualizer    |
-|----------------------------|
-| animates drone trajectories|
-+----------------------------+
+## 🧩 Architecture Diagram (Text-Based)
 
-🔧 Building & Running
-1️⃣ Build & Run the C++ Simulator
+SECTION UNDER CONSTRUCTION
+
+## 🔧 Building & Running  
+1️⃣ Build & Run the C++ Simulator  
 
 Use Visual Studio, g++, or any C++17 compiler.
 
-Example (g++):
+Example (Visual Studios):  
+- Open Visual Studios
+- Open project folder
+- Compile project  
 
-g++ -std=c++17 main.cpp Simulator.cpp Drone.cpp -o DroneSim
-./DroneSim
+2️⃣ Run the Java Visualizer  
 
+- Open your Java IDE 
+- Then find DroneVisualizerSwing.java
+- Compile/ run the project
 
-Output files:
+## 📝 Example Output
 
-simulation_log.csv
-
-comms_log.csv
-
-2️⃣ Run the Java Visualizer
-
-Open /java-visualizer/DroneVisualizerSwing.java and modify:
-
-final String csvPath = "path/to/simulation_log.csv";
-
-
-Then run with:
-
-javac DroneVisualizerSwing.java
-java DroneVisualizerSwing
-
-
-You will see a real-time animation of the swarm.
-
-📝 Example Output
-
-(You can add screenshots later)
-
-t=1.50
-Drone 0 pos=(54.2, 57.8) vel=(1.2, 0.9)
-Drone 1 pos=(66.3, 57.9) vel=(-1.1, 0.8)
-Drone 2 pos=(60.0, 64.1) vel=(0.0, -1.5)
-Drone 3 pos=(60.1, 52.3) vel=(-0.2, 1.4)
+C++ compile output: 
+<img width="1473" height="749" alt="Screenshot 2025-12-01 021316" src="https://github.com/user-attachments/assets/36fd8bac-bf2e-45b7-97c1-8a43a3da92aa" />
 
 
 Visualizer GUI example:
-(Add when ready)
 
-🎯 Purpose
+https://github.com/user-attachments/assets/aaa0557c-795c-4097-812c-72f0ff004e88
+
+## 🎯 Purpose
 
 This project demonstrates:
 
@@ -159,7 +114,7 @@ Engineering design for autonomous systems
 
 Professional documentation for academic/industry review
 
-📘 Future Enhancements
+## 📘 Future Enhancements
 
 Formation switching and dynamic target tracking
 
