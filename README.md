@@ -50,25 +50,25 @@ Saved to simulation_log.csv, which the Java visualizer reads.
 - Shows time, drone IDs, and frame count
 - ~30 FPS animation
 
-## 📂 Repository Structure
-DroneSwarmSimulation/
-│
-├── Drone.cpp
-├── Drone.h
-├── Network.h
-├── Message.h
-├── Simulator.cpp
-├── Simulator.h
-├── Vector2.h
-├── World.h
-├── Node.h
-├── main.cpp
-│
-├── Java-Visualizer/
-│   └── DroneVisualizerSwing.java
-│
-├── .gitignore
-└── README.md
+## 📂 Repository Structure  
+DroneSwarmSimulation/ 
+│  
+├── Drone.cpp  
+├── Drone.h  
+├── Network.h  
+├── Message.h  
+├── Simulator.cpp  
+├── Simulator.h  
+├── Vector2.h  
+├── World.h  
+├── Node.h  
+├── main.cpp  
+│  
+├── Java-Visualizer/  
+│&nbsp; &nbsp;&nbsp;&nbsp;└── DroneVisualizerSwing.java  
+│  
+├── .gitignore  
+└── README.md  
 
 ## 🧩 Architecture Diagram (Text-Based)
 
