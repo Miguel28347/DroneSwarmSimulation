@@ -70,7 +70,7 @@ DroneSwarmSimulation/
 ├── .gitignore  
 └── README.md  
 
-## 🧩 Architecture Diagram (Text-Based)
+## 🧩 Architecture Diagram
 
 SECTION UNDER CONSTRUCTION
 
