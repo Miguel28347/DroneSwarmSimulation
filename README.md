@@ -1,9 +1,9 @@
 # 🚁 DroneSwarmSimulation
 
-This is a multi-drone autonomous swarm simulator deaturing physics, encrypted networking, telemetry logging, and a Java Swing visualizer. 
+This is a multi-drone autonomous swarm simulator featuring physics, encrypted networking, telemetry logging, and a Java Swing visualizer. 
 # 📌 Overview
 
-DroneSwarmSilumation is a full 2D multi-drone swarm enviornment built in C++, with real-time visualization provided through a Java Swing application. It models autonomous drones navigating a simulated world using:
+DroneSwarmSimulation is a full 2D multi-drone swarm environment built in C++, with real-time visualization provided through a Java Swing application. It models autonomous drones navigating a simulated world using:
 
 - Newtonian Physics
 - Formation control with proportional-derivative controllers
@@ -15,24 +15,24 @@ DroneSwarmSilumation is a full 2D multi-drone swarm enviornment built in C++, wi
 ## 🧠 Swarm Control
 
 - N-drone formation flight using proportional-derivative (PD) controllers
-- Per-drone goal offsets and dynamic target acquistion
+- Per-drone goal offsets and dynamic target acquisition
 - Automatic thrust control and velocity damping
 
 ## ⚙️ Physics Engine
 
 - Semi-implicit Euler integration
 - Gravity, boundary collision handling, and speed limiting
-- Clean vector math abstraction(Vector2)
+- Clean vector math abstraction (Vector2)
 - Drone mass, thrust and envelope parameters
 
 ## 🔐 Networking Layer  
 Realistic radio-style network model with:
 
 - Base latency + random jitter
-- Configurable packet-drop probablity
-- XOR payload encryption(lightweight)
+- Configurable packet-drop probability
+- XOR payload encryption (lightweight)
 - Message IDs and timestamps
-- per-node inbox messages queues
+- Per-node inbox message queues
 - Communication logs saved to comms_log.csv
 
 ## 📊 Telemetry Logging  
@@ -70,58 +70,44 @@ DroneSwarmSimulation/
 ├── .gitignore  
 └── README.md  
 
-## 🧩 Architecture Diagram
-
-SECTION UNDER CONSTRUCTION
-
 ## 🔧 Building & Running  
 1️⃣ Build & Run the C++ Simulator  
 
-Use Visual Studio, g++, or any C++17 compiler.
+Any C++17 compiler works (Visual Studio recommended)
 
-Example (Visual Studios):  
-- Open Visual Studios
-- Open project folder
-- Compile project  
+Visual Studio Example:  
+- Open the project folder
+- Build -> Run 
+
+📝 C++ Example Output
+
+C++ compile output: 
+<img width="1473" height="749" alt="Screenshot 2025-12-01 021316" src="https://github.com/user-attachments/assets/36fd8bac-bf2e-45b7-97c1-8a43a3da92aa" />  
 
 2️⃣ Run the Java Visualizer  
 
-- Open your Java IDE 
-- Then find DroneVisualizerSwing.java
-- Compile/ run the project
+- Open in IntelliJ/ NetBeans/ VS Code  
+- Compile and run DroneVisualizerSwing.java  
 
-## 📝 Example Output
+📝 Java Example Output
 
-C++ compile output: 
-<img width="1473" height="749" alt="Screenshot 2025-12-01 021316" src="https://github.com/user-attachments/assets/36fd8bac-bf2e-45b7-97c1-8a43a3da92aa" />
-
-
-Visualizer GUI example:
 
 https://github.com/user-attachments/assets/aaa0557c-795c-4097-812c-72f0ff004e88
 
-## 🎯 Purpose
+## 🎯 Technical Summary
 
 This project demonstrates:
 
-Ability to architect and implement a multi-module codebase
+- Real-time autonomous swarm simulation
+- Newtonian motion modeling
+- Distributed networking with packet loss
+- Multithreaded visualization  
+- Cross-language integration (C++ -> Java)
+- Scalable architecture across multiple modules  
 
-Realistic simulation of physics + networking
-
-Cross-language integration (C++ + Java)
-
-Engineering design for autonomous systems
-
-Professional documentation for academic/industry review
-
-## 📘 Future Enhancements
-
-Formation switching and dynamic target tracking
-
-Collision avoidance & obstacle simulation
-
-Sensor noise + estimator (EKF filter)
-
-Web-based visualization via WebGL
-
-Real-time UDP networking to ROS
+## 📘 Future Enhancements  
+- Dynamic formation switching
+- Collision avoidance & obstacle simulation
+- WebGL interactive visualization
+- Real-time UDP networking to ROS/ PX4
+- Camera & CV-based target detection
