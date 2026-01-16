@@ -1,6 +1,6 @@
 # 🚁 DroneSwarmSimulation
 
-This is a multi-drone autonomous swarm simulator featuring physics, encrypted networking, telemetry logging, and a Java Swing visualizer. 
+This is a multi-drone semi-autonomous swarm simulator featuring physics, encrypted networking, telemetry logging, and a Java Swing visualizer. 
 # 📌 Overview
 
 DroneSwarmSimulation is a full 2D multi-drone swarm environment built in C++, with real-time visualization provided through a Java Swing application. It models autonomous drones navigating a simulated world using:
@@ -96,18 +96,18 @@ https://github.com/user-attachments/assets/aaa0557c-795c-4097-812c-72f0ff004e88
 
 ## 🎯 Technical Summary
 
-This project demonstrates:
 
-- Real-time autonomous swarm simulation
+- Autonomous formation-control swarm simulation
 - Newtonian motion modeling
-- Distributed networking with packet loss
-- Multithreaded visualization  
-- Cross-language integration (C++ -> Java)
-- Scalable architecture across multiple modules  
+- Simulated distributed networking with packet loss
+- Event Dispatch Thread (EDT) visualization
+- Cross-language integration (C++ → Java)
+- Modular, scalable system architecture
 
 ## 📘 Future Enhancements  
-- Dynamic formation switching
-- Collision avoidance & obstacle simulation
-- WebGL interactive visualization
-- Real-time UDP networking to ROS/ PX4
-- Camera & CV-based target detection
+- Dynamic formation switching based on mission objectives
+- Collision avoidance with obstacle detection and path replanning
+- Autonomous target selection and task allocation
+- Real-time UDP networking to ROS/PX4 for hardware-in-the-loop testing
+- Decentralized decision-making with consensus algorithms
+- 3D physics simulation with aerodynamic modeling
